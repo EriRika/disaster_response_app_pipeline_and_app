@@ -41,13 +41,7 @@ def clean_data(df):
     # concatenate the original dataframe with the new `categories` dataframe
     df = pd.concat([df, categories], axis=1)
     df.drop_duplicates(inplace = True)
-42
-    df = pd.concat([df, categories], axis=1)
-43
-    df.drop_duplicates(inplace = True)
-44
-    
-45
+
     #column related contained class 2, but it was only 2, if all other columns were 0, which was also true for related = 0, hence I overwrite it
     
     #column related contained class 2, but it was only 2, if all other columns were 0, which was also true for related = 0, hence I overwrite it
