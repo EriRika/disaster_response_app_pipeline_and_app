@@ -33,7 +33,7 @@
 - GridSearchCV
 - FeatureUnion
 - Pipeline
-- Own library
+- Own class to tokenize
 
 
 ## Instructions:
