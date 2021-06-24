@@ -28,4 +28,4 @@
 3. Go to the address, which is shown in the console output. In my case it's (http://192.168.0.165:3001/)
 
 4. Once your app runs, it will look as follows:
-    -![Alt text](http://full/path/to/img.jpg "Optional title")
+    -![Cluster_by_genre](https://github.com/EriRika/disaster_response_app_pipeline_and_app/blob/master/pictures/cluster_by_genre.html "Cluster by Genre")
