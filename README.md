@@ -1,4 +1,11 @@
 # Disaster Response Pipeline Project
+### What is included in this project:
+1. I have an ETL, which reads and cleans CSV files, which containe disaster response messages and writes them into an sqlite database. This ETL process can be found in --> web_app --> data --> process_data.py or in the Jupyter Notebook ETL Pipeline
+
+2. I created a machine learning pipeline, which reads the sqlite database and trains a classifier to predict the type of message. This ML process can be found in --> web_app --> models --> train_classifier.py or in the Jupyter Notebook ML Pipeline
+
+3. I created an app/website, which shows some insights of the data an predicts new messages by reading from an input field
+
 
 ### Instructions:
 1. Run the following commands in the project's root directory to set up your database and model.
