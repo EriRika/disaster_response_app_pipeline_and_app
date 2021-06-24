@@ -1,6 +1,6 @@
 # Disaster Response Pipeline Project
 ### What is included in this project:
-1. I have an ETL, which reads and cleans CSV files, which containe disaster response messages and writes them into an sqlite database. This ETL process can be found in --> web_app --> data --> process_data.py or in the Jupyter Notebook ETL Pipeline
+1. the repository containsan ETL process, which reads and cleans CSV files, which contain disaster response messages and which writes them into an sqlite database. This ETL process can be found in --> web_app --> data --> process_data.py or in the Jupyter Notebook ETL Pipeline
 
 2. I created a machine learning pipeline, which reads the sqlite database and trains a classifier to predict the type of message. This ML process can be found in --> web_app --> models --> train_classifier.py or in the Jupyter Notebook ML Pipeline
 
@@ -28,4 +28,5 @@
 3. Go to the address, which is shown in the console output. In my case it's (http://192.168.0.165:3001/)
 
 4. Once your app runs, it will look as follows:
-    -![Cluster_by_genre](https://github.com/EriRika/disaster_response_app_pipeline_and_app/blob/master/pictures/cluster_by_genre.html "Cluster by Genre")
+    -![Cluster_by_genre](https://github.com/EriRika/disaster_response_app_pipeline_and_app/blob/master/pictures/App_preview.PNG "Cluster by Genre")
+    -![Cluster_by_genre](https://github.com/EriRika/disaster_response_app_pipeline_and_app/blob/master/pictures/App_preview_2.PNG "Cluster by Genre")
