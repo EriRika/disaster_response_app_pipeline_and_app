@@ -1,13 +1,42 @@
-# Disaster Response Pipeline Project
-### What is included in this project:
+# Disaster Response Flask App
+
+## Table of contents
+
+- [What's included](#whats-included)
+- [Libraries used](#libraries-used)
+- [Instructions](#instructions)
+- [Tools used](#tools-used)
+- [Preview](#preview)
+- [What's next](#next)
+
+
+
+## What's included:
 1. the repository containsan ETL process, which reads and cleans CSV files, which contain disaster response messages and which writes them into an sqlite database. This ETL process can be found in --> web_app --> data --> process_data.py or in the Jupyter Notebook ETL Pipeline
 
 2. I created a machine learning pipeline, which reads the sqlite database and trains a classifier to predict the type of message. This ML process can be found in --> web_app --> models --> train_classifier.py or in the Jupyter Notebook ML Pipeline
 
-3. I created an app/website, which shows some insights of the data an predicts new messages by reading from an input field
+3. I created a flask app/website, which shows some insights of the data an predicts new messages by reading from an input field
+
+## Libraries used
+- plotly
+- pandas
+- numpy
+- sklearn
+- nltk
+- flask
+- SQLAlchemy
+- sklearn
 
 
-### Instructions:
+## Tools used
+- GridSearchCV
+- FeatureUnion
+- Pipeline
+- Own library
+
+
+## Instructions:
 1. Run the following commands in the project's root directory to set up your database and model.
 
     - Create virtual environment in the root folder disaster_response_app_pipeline_and_app
@@ -27,6 +56,12 @@
 
 3. Go to the address, which is shown in the console output. In my case it's (http://192.168.0.165:3001/)
 
-4. Once your app runs, it will look as follows:
+## Preview
+Once your app runs, it will look as follows:
     -![Cluster_by_genre](https://github.com/EriRika/disaster_response_app_pipeline_and_app/blob/master/pictures/App_preview.PNG "Cluster by Genre")
     -![Cluster_by_genre](https://github.com/EriRika/disaster_response_app_pipeline_and_app/blob/master/pictures/App_preview_2.PNG "Cluster by Genre")
+    
+    
+## What's next
+I tried to deploy the app on Heroku, but my pickle fiel and the database was too big and exceeded the free access heroku subscription policy. I would like to find a platform where I can publish the app
+
