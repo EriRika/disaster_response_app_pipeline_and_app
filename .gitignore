@@ -6,5 +6,4 @@ web_app/models/classifier.pkl
 *.pkl
 web_app/data/DisasterResponse.db
 /web_app/data/DisasterResponse.db
-web_app/
 .ipynb_checkpoints

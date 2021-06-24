@@ -1,0 +1,6 @@
+setup.py
+tokenize_class/tokenize_class.py
+tokenize_class.egg-info/PKG-INFO
+tokenize_class.egg-info/SOURCES.txt
+tokenize_class.egg-info/dependency_links.txt
+tokenize_class.egg-info/top_level.txt
