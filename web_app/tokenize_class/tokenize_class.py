@@ -4,6 +4,7 @@ import nltk
 from nltk.corpus import stopwords
 from nltk.stem.wordnet import WordNetLemmatizer
 from nltk.tokenize import word_tokenize
+from sklearn.base import BaseEstimator, TransformerMixin
 
 nltk.download('punkt')
 nltk.download('stopwords')
@@ -32,3 +33,14 @@ class tokenize_class(object):
         clean_tokens = [lemmatizer.lemmatize(word) for word in tokens if word not in stop_words]
 
         return clean_tokens
+
+class ColumnSelector(BaseEstimator, TransformerMixin):
+    """Select only specified columns."""
+    def __init__(self, columns):
+        self.columns = columns
+        
+    def fit(self, X, y=None):
+        return self
+    
+    def transform(self, X):
+        return X[self.columns]

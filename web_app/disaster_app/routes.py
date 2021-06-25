@@ -13,6 +13,7 @@ import joblib
 from sqlalchemy import create_engine
 
 from tokenize_class.tokenize_class import tokenize_class
+#from tokenize_class.tokenize_class import ColumnSelector
 #app = Flask(__name__)
 
 #def tokenize(text):

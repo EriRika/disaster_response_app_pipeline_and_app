@@ -31,8 +31,10 @@ import joblib
 
 #from sklearn.datasets import make_multilabel_classification
 from sklearn.multioutput import MultiOutputClassifier
+from sklearn.preprocessing import OneHotEncoder
 
 from tokenize_class.tokenize_class import tokenize_class
+#from tokenize_class.tokenize_class import ColumnSelector
 
 def load_data(database_filepath):
     """
@@ -66,9 +68,10 @@ def build_model():
     """Create pipeline with CountVectorizer, TfidfTransformer, MultioutputClassifier and RandomForestClassifier"""
     pipeline = Pipeline([
         ('vect', CountVectorizer(tokenizer = tokenize_class().tokenize)),
-        ('tfidf', TfidfTransformer()),
-        ('clf', MultiOutputClassifier(RandomForestClassifier()))
+        ('tfidf', TfidfTransformer(use_idf = False)),
+        ('clf', MultiOutputClassifier(RandomForestClassifier(min_samples_split = 3,random_state=42 )))
     ])
+
     return pipeline
 
 
