@@ -4,6 +4,4 @@ app_env
 web_app/models/classifier.pkl
 /web_app/models/classifier.pkl
 *.pkl
-web_app/data/DisasterResponse.db
-/web_app/data/DisasterResponse.db
 .ipynb_checkpoints
