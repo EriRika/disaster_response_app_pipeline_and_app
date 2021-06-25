@@ -64,9 +64,9 @@ Once your app runs, it will look as follows:
     
     
 ## What's next
-I tried to deploy the app on Heroku, but my pickle fiel and the database was too big and exceeded the free access heroku subscription policy. I would like to find a platform where I can publish the app
+I tried to deploy the app on Heroku, but apparently it is not allowed to push sqlite databases to Heroku
 
 ## Helpful articles
-    - https://rebeccabilbro.github.io/module-main-has-no-attribute/
+- [module-main-has-no-attribute](https://rebeccabilbro.github.io/module-main-has-no-attribute/)
+- [pipeline-columntransformer-and-featureunion-explained](https://towardsdatascience.com/pipeline-columntransformer-and-featureunion-explained-f5491f815f)
     
-
