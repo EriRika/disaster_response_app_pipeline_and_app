@@ -8,6 +8,7 @@
 - [Tools used](#tools-used)
 - [Preview](#preview)
 - [What's next](#next)
+- [Helpful articles](#articles)
 
 
 
@@ -64,4 +65,8 @@ Once your app runs, it will look as follows:
     
 ## What's next
 I tried to deploy the app on Heroku, but my pickle fiel and the database was too big and exceeded the free access heroku subscription policy. I would like to find a platform where I can publish the app
+
+## Helpful articles
+    - https://rebeccabilbro.github.io/module-main-has-no-attribute/
+    
 
