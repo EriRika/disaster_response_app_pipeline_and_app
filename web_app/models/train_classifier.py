@@ -1,3 +1,4 @@
+from inspect import CO_VARARGS
 import sys
 import pandas as pd
 import numpy as np
@@ -66,21 +67,27 @@ def load_data(database_filepath):
 
 def build_model():
     """Create pipeline with CountVectorizer, TfidfTransformer, MultioutputClassifier and RandomForestClassifier"""
+    parameters = {
+        'vect__ngram_range': ((1, 1), (1, 2)),
+        'vect__max_df': (0.9, 1.0),
+        'vect__max_features': (None, 950, 1900),
+        'tfidf__use_idf': (True, False),
+        'clf__estimator__n_estimators': [20, 100],
+        'clf__estimator__min_samples_split': [1000, 0.2],
+    }
     pipeline = Pipeline([
         ('vect', CountVectorizer(tokenizer = tokenize_class().tokenize)),
         ('tfidf', TfidfTransformer(use_idf = False)),
         ('clf', MultiOutputClassifier(RandomForestClassifier(min_samples_split = 3,random_state=42 )))
     ])
-
-    return pipeline
+    cv = GridSearchCV(pipeline, parameters, verbose = 3)
+    return cv
 
 
 def evaluate_model(model, X_test, Y_test, category_names):
     Y_pred = model.predict(X_test)
-    for i, cat in enumerate(category_names):
-        print(cat)
-        print(classification_report(Y_test.iloc[:,i], Y_pred[:,i]))
-        print('\n')
+    print(classification_report(Y_test, Y_pred,target_names=category_names))
+
     return Y_pred
 
 
